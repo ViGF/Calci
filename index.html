@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calci</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@600&family=Oswald&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header" onmouseleave="closePalettes()">
+        <h1>Calci</h1>
+        <button onclick="showPalettes()" class="button-show">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M 18 2 L 15.585938 4.4140625 L 19.585938 8.4140625 L 22 6 L 18 2 z M 14.076172 5.9238281 L 3 17 L 3 21 L 7 21 L 18.076172 9.9238281 L 14.076172 5.9238281 z">
+                </path>
+            </svg>
+        </button>
+        <button onclick="showPalettes()" class="button-close">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                    d="M 4.7070312 3.2929688 L 3.2929688 4.7070312 L 10.585938 12 L 3.2929688 19.292969 L 4.7070312 20.707031 L 12 13.414062 L 19.292969 20.707031 L 20.707031 19.292969 L 13.414062 12 L 20.707031 4.7070312 L 19.292969 3.2929688 L 12 10.585938 L 4.7070312 3.2929688 z">
+                </path>
+            </svg>
+        </button>
+        <a onmouseenter="setPalette(['#FF8E71', '#FFC2B3', '#FF481A'])" onclick="showPalettes()"></a>
+        <a onmouseenter="setPalette(['#F38181', '#F8B9B9', '#ED4545'])" onclick="showPalettes()"></a>
+        <a onmouseenter="setPalette(['#F5B461', '#FADDB7', '#F19927'])" onclick="showPalettes()"></a>
+        <a onmouseenter="setPalette(['#FFA372', '#FFCDB3', '#FF8B4C'])" onclick="showPalettes()"></a>
+        <a onmouseenter="setPalette(['#F67280', '#FAB7BE', '#F45768'])" onclick="showPalettes()"></a>
+        <a onmouseenter="setPalette(['#92ECC5', '#D4F7E8', '#67E4AE'])" onclick="showPalettes()"></a>
+        <a onmouseenter="setPalette(['#6EB6FF', '#B3D8FF', '#4CA5FF'])" onclick="showPalettes()"></a>
+        <a onmouseenter="setPalette(['#46B7B9', '#C8E9EA', '#46B7B9'])" onclick="showPalettes()"></a>
+    </header>
+    <div class="wrapper">
+        <main>
+            <header>Resultado</header>
+            <div class="keyboard">
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="C">
+                        </td>
+                        <td>
+                            <input type="button" value="%">
+                        </td>
+                        <td>
+                            <input type="button" value="/">
+                        </td>
+                        <td>
+                            <input type="button" value="X">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="7">
+                        </td>
+                        <td>
+                            <input type="button" value="8">
+                        </td>
+                        <td>
+                            <input type="button" value="9">
+                        </td>
+                        <td>
+                            <input type="button" value="-">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="4">
+                        </td>
+                        <td>
+                            <input type="button" value="5">
+                        </td>
+                        <td>
+                            <input type="button" value="6">
+                        </td>
+                        <td>
+                            <input type="button" value="+">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="1">
+                        </td>
+                        <td>
+                            <input type="button" value="2">
+                        </td>
+                        <td>
+                            <input type="button" value="3">
+                        </td>
+                        <td rowspan="2">
+                            <input type="button" value="=">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="0">
+                        </td>
+                        <td>
+                            <input type="button" value=".">
+                        </td>
+                        <td>
+                            <button>
+                                <svg width="34" height="28" viewBox="0 0 34 28" fill="none"
+                                    xmlns="htta://www.w3.org/2000/svg">
+                                    <path
+                                        d="M30.8302 0.000187255H14.1803C12.9191 0.00770376 11.7052 0.481128 10.7719 1.32945L10.6015 1.51691L0.376401 14.2642C0.103339 14.6036 -0.0293931 15.0347 0.00547032 15.4689C0.0403337 15.9031 0.240145 16.3075 0.563862 16.599L10.789 25.9379C11.7223 26.7862 12.9362 27.2597 14.1974 27.2672H30.8473C31.676 27.2717 32.4728 26.948 33.0636 26.3668C33.6543 25.7857 33.991 24.9942 34 24.1656V3.10181C33.9955 2.69001 33.91 2.28313 33.7483 1.90439C33.5866 1.52565 33.3519 1.18247 33.0575 0.894458C32.7632 0.606441 32.415 0.379225 32.0328 0.225785C31.6507 0.0723452 31.242 -0.00431308 30.8302 0.000187255ZM30.5916 23.8588H14.1803C13.758 23.8577 13.3511 23.6998 13.0385 23.4157L3.95519 15.1504L13.1237 3.78348C13.4235 3.54292 13.7959 3.41079 14.1803 3.40856H30.5916V23.8588Z"
+                                        fill="white" />
+                                    <path
+                                        d="M15.7481 18.252C15.9065 18.4118 16.095 18.5385 16.3027 18.6251C16.5104 18.7116 16.7331 18.7561 16.9581 18.7561C17.1831 18.7561 17.4058 18.7116 17.6135 18.6251C17.8211 18.5385 18.0096 18.4118 18.1681 18.252L20.3665 16.0366L22.5649 18.252C22.7233 18.4118 22.9118 18.5385 23.1194 18.6251C23.3271 18.7116 23.5499 18.7561 23.7748 18.7561C23.9998 18.7561 24.2226 18.7116 24.4302 18.6251C24.6379 18.5385 24.8264 18.4118 24.9848 18.252C25.1445 18.0936 25.2713 17.9051 25.3578 17.6975C25.4444 17.4898 25.4889 17.267 25.4889 17.0421C25.4889 16.8171 25.4444 16.5943 25.3578 16.3867C25.2713 16.179 25.1445 15.9905 24.9848 15.8321L22.7694 13.6337L24.9848 11.4353C25.3057 11.1144 25.486 10.6791 25.486 10.2253C25.486 9.77149 25.3057 9.33625 24.9848 9.01535C24.6639 8.69444 24.2287 8.51416 23.7748 8.51416C23.321 8.51416 22.8858 8.69444 22.5649 9.01535L20.3665 11.2308L18.1681 9.01535C17.8472 8.69444 17.4119 8.51416 16.9581 8.51416C16.5043 8.51416 16.069 8.69444 15.7481 9.01535C15.4272 9.33625 15.2469 9.77149 15.2469 10.2253C15.2469 10.6791 15.4272 11.1144 15.7481 11.4353L17.9636 13.6337L15.7481 15.8321C15.5884 15.9905 15.4616 16.179 15.3751 16.3867C15.2886 16.5943 15.244 16.8171 15.244 17.0421C15.244 17.267 15.2886 17.4898 15.3751 17.6975C15.4616 17.9051 15.5884 18.0936 15.7481 18.252Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

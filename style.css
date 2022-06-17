@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #f5b561;
+    --secondary-color: #faddb7;
+    --result-color: #f19a27;
+    font-size: 62.5%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: var(--secondary-color);
+}
+
+input, main button {
+    font-size: 3.5rem;
+    background: var(--primary-color);
+    border: none;
+    width: 100%;
+    height: 16vh;
+    cursor: pointer;
+    color: #FFFF;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+tr {
+    background: var(--primary-color);
+    display: flex;
+}
+
+tr:nth-child(4) {
+    max-height: 9rem;
+}
+
+tr:nth-child(4) td:nth-child(4) input {
+    height: calc(16vh + 9rem);
+}
+
+tr:nth-child(5) {
+    max-width: calc(100% - (100% / 4));
+}
+
+td {
+    width: 100%;
+}
+
+td:hover {
+    filter: brightness(0.9);
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#header button svg {
+    fill: var(--primary-color);
+    margin-top: 3px;
+}
+
+.button-close {
+    display: none;
+}
+
+#header a {
+    transition: transform 350ms;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+#header button {
+    margin-left: 5px;
+}
+
+#header button:hover {
+    filter: brightness(0.9);
+}
+
+#header.show-palettes .button-show {
+    display: none;
+}
+
+#header.show-palettes .button-close {
+    display: block;
+}
+
+#header.show-palettes a {
+    visibility: visible;
+    transition: transform 350ms;
+    transform: translateX(0%);
+}
+
+#header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 3rem 2.7rem;
+}
+
+#header h1 {
+    font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+    padding-right: 7px;
+}
+
+#header a {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    margin-inline: 4px;
+}
+
+#header a:hover {
+    filter: brightness(0.9);
+}
+
+#header a:nth-child(4) {
+    background: #ff8d70;
+}
+
+#header a:nth-child(5) {
+    background: #f38181;
+}
+
+#header a:nth-child(6) {
+    background: #f5b561;
+}
+
+#header a:nth-child(7) {
+    background: #ffa270;
+}
+
+#header a:nth-child(8) {
+    background: #f67481;
+}
+
+#header a:nth-child(9) {
+    background: #93ecc5;
+}
+
+#header a:nth-child(10) {
+    background: #70b8ff;
+}
+
+#header a:nth-child(11) {
+    background: #46b7b9;
+}
+
+main {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: fit-content;
+}
+
+main header {
+    font-family: 'Oswald', sans-serif;
+    font-size: 6rem;
+    text-align: end;
+    padding-right: 2.8rem;
+    color: var(--result-color);
+}
+
+table, main header {
+    max-width: 72rem;
+    margin: auto;
+}
+
+main .keyboard {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
