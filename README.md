@@ -1,7 +1,7 @@
 # Calci
 Calculadora responsiva e personalizável
 
-![cover](github/cover.png?style=flat)
+![cover](github/cover.png)
 
 ## ✨ Tecnologias
 HTML | CSS | JavaScript | Google Fonts
