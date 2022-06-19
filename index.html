@@ -42,74 +42,75 @@
     </header>
     <div class="wrapper">
         <main>
-            <header>Resultado</header>
+            <header data-previous-operand ></header>
+            <header data-current-operand >0</header>
             <div class="keyboard">
                 <table>
                     <tr>
                         <td>
-                            <input type="button" value="C">
+                            <input type="button" value="C" data-delete-all>
                         </td>
                         <td>
-                            <input type="button" value="%">
+                            <input type="button" value="%" data-operator>
                         </td>
                         <td>
-                            <input type="button" value="/">
+                            <input type="button" value="/" data-operator>
                         </td>
                         <td>
-                            <input type="button" value="X">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="button" value="7">
-                        </td>
-                        <td>
-                            <input type="button" value="8">
-                        </td>
-                        <td>
-                            <input type="button" value="9">
-                        </td>
-                        <td>
-                            <input type="button" value="-">
+                            <input type="button" value="x" data-operator>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="button" value="4">
+                            <input type="button" value="7" data-number>
                         </td>
                         <td>
-                            <input type="button" value="5">
+                            <input type="button" value="8" data-number>
                         </td>
                         <td>
-                            <input type="button" value="6">
+                            <input type="button" value="9" data-number>
                         </td>
                         <td>
-                            <input type="button" value="+">
+                            <input type="button" value="-" data-operator>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="button" value="1">
+                            <input type="button" value="4" data-number>
                         </td>
                         <td>
-                            <input type="button" value="2">
+                            <input type="button" value="5" data-number>
                         </td>
                         <td>
-                            <input type="button" value="3">
+                            <input type="button" value="6" data-number>
+                        </td>
+                        <td>
+                            <input type="button" value="+" data-operator>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="1" data-number>
+                        </td>
+                        <td>
+                            <input type="button" value="2" data-number>
+                        </td>
+                        <td>
+                            <input type="button" value="3" data-number>
                         </td>
                         <td rowspan="2">
-                            <input type="button" value="=">
+                            <input type="button" value="=" data-equals>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="button" value="0">
+                            <input type="button" value="0" data-number>
                         </td>
                         <td>
-                            <input type="button" value=".">
+                            <input type="button" value="." data-number>
                         </td>
                         <td>
-                            <button>
+                            <button data-delete>
                                 <svg width="34" height="28" viewBox="0 0 34 28" fill="none"
                                     xmlns="htta://www.w3.org/2000/svg">
                                     <path

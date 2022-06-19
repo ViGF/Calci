@@ -180,6 +180,10 @@ main header {
     color: var(--result-color);
 }
 
+main header:nth-child(1) {
+    font-size: 2rem;
+}
+
 table, main header {
     max-width: 72rem;
     margin: auto;
