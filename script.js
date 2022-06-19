@@ -1,11 +1,11 @@
 /*Toggle Colors*/
 
 const header = document.getElementById('header')
-let prevColors = ['#f5b561', '#faddb7', '#f19a27']
+let prevColors = localStorage.getItem('colorsSetting')?.split(',') || ['#f5b561', '#faddb7', '#f19a27']
+setPrevColors()
 
 function showPalettes() {
     header.classList.toggle('show-palettes')
-    getPrevColors()
 }
 
 function closePalettes() {
@@ -18,6 +18,7 @@ function getPrevColors() {
         getComputedStyle(document.documentElement).getPropertyValue('--secondary-color'),
         getComputedStyle(document.documentElement).getPropertyValue('--result-color')
     ]
+    localStorage.setItem('colorsSetting', prevColors)
 }
 
 function setPalette(list) {
